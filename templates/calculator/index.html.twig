@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Simple Calculator{% endblock %}</title>
+    </head>
+    <body>
+        <h1>Simple Calculator</h1>
+        <h4>( Supports + - * / operators only )</h4>
+        <h4>Example : ( 4 + 4 ) * ( 2.5 * 4 ) + 4</h4>
+        <form>
+            <input name="calc_str" autofocus="true" autocomplete="off" />
+            <input type="submit" value="Calculate">
+            <br/><br/>
+            <h2>
+            {% if error is not empty %}
+                {{ error }}
+            {% elseif calc_str is not empty %}
+                {{ calc_str }} = {{ result }}
+            {% endif %}
+            </h2>
+        </form>
+    </body>
+</html>

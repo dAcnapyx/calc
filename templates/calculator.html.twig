@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Simple Calculator{% endblock %}</title>
+    </head>
+    <body>
+        <h1>Simple Calculator</h1>
+        <h4>( Supports + - * / operators only )</h4>
+        <form>
+            <input name="calc_str" autofocus="true" value="{{ calc_str }}" />
+            <input type="submit" value="Calculate">
+            <br/><br/>
+            {{ result }}
+
+        </form>
+    </body>
+</html>
